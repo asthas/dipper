@@ -6,15 +6,33 @@
  
 
         <div ng-controller="formController as form">
-          <form novalidate class="simple-form">
-            House no.: <input type="text" ng-model="form.user.house" /><br />
-            Street: <input type="text" ng-model="form.user.street" /><br />
-            City: <input type="text" ng-model="form.user.city"/><br>
+          <form>
+            <fieldset class="form-group">
+              <label for="exampleInputHouseNumber">House number</label>
+              <input type="text" class="form-control"  ng-model="form.user.house" id="exampleInputHouseNumber" placeholder="Enter House number">
+            </fieldset>
+
+            <fieldset class="form-group">
+              <label for="exampleInputStreet">Street</label>
+              <input type="text" class="form-control" ng-model="form.user.street" id="exampleInputStreet" placeholder="Enter name of the street">
+            </fieldset>
+
+            <fieldset class="form-group">
+              <label for="exampleInputCity">City</label>
+              <input type="text" class="form-control" ng-model="form.user.city" id="exampleInputCity" placeholder="Enter city">
+            </fieldset>
+
+            <fieldset class="form-group">
+              <label for="exampleInputCountry">Country</label>
+              <input type="text" class="form-control" ng-model="form.user.country" id="exampleInputCountry" placeholder="Enter country">
+            </fieldset>
+
             <input type="button" ng-click="form.reset()" value="Reset" />
-            <input type="submit" ng-click="form.update(user)" value="Save" />
+            <input type="submit" ng-click="form.update(form.user)" value="Save" />
           </form>
-          <pre>form.user = {{form.user | json}}</pre>
-          <pre>form.master = {{form.master | json}}</pre>
+          <!--Preview user and master object -->
+          <pre>user = {{form.user | json}}</pre>
+          <pre>master = {{form.master | json}}</pre>
         </div>
       </div>
     </div>
