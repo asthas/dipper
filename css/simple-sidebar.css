@@ -19,6 +19,11 @@
             height: 40px;
             width: 250px;
         }
+#map {
+    width: 400px;
+    
+    height: 400px;
+}
 
 #wrapper.toggled {
     padding-left: 250px;
