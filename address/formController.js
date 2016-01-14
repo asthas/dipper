@@ -1,3 +1,4 @@
+/*Controller for single adress field
 angular.module('app')
     .controller('formController',function($state) {
 
@@ -6,7 +7,7 @@ angular.module('app')
 
       vm.update = function(user) {
 
-        vm.master = angular.copy(user); //no paglu :D
+        vm.master = angular.copy(user); 
         console.log(vm, user);
       };
 
@@ -14,5 +15,24 @@ angular.module('app')
         vm.user = angular.copy(vm.master);
       };
 
-      vm.reset(); //what is view model any variable name
+      vm.reset();
     });
+  */
+
+  angular.module('app')
+    .controller('formController', function() {
+      var vm = this;
+
+      vm.choices = [{id: 'choice1'}, {id: 'choice2'}];
+
+      vm.addNewChoice = function() {
+        var newItemNo = vm.choices.length + 1;
+        vm.choices.push({'id': 'choice' + newItemNo});
+
+      }
+
+      vm.removeChoice = function() {
+        var lastItem = vm.choices.length - 1;
+        vm.choices.splice(lastItem);
+      }
+    })

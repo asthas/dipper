@@ -22,6 +22,8 @@
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
 
+    <link href="css/main.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,16 +44,16 @@
                     <a ui-sref="home" ui-sref-active="active">Profile</a>
                 </li>
                 <li >
-                    <a ui-sref="addressDetails" ui-sref-active="active">Add address details</a>
+                    <a ui-sref="addressDetails" >Add address details</a>
                 </li>
                 <li>
-                    <a ui-sref="getLocation" ui-sref-active="active">Locate office</a>
+                    <a ui-sref="getLocation">Locate office</a>
                 </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-        <ui-view></ui-view>
-        
+        <div ui-view>
+        </div>
     </div>
     <!-- /#wrapper -->
 
@@ -62,7 +64,6 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="app.js"></script>
-    <script src="nav/navController.js"></script>
     <script src="address/formController.js"></script>
 </body>
 

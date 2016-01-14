@@ -26,13 +26,14 @@
               <label for="exampleInputCountry">Country</label>
               <input type="text" class="form-control" ng-model="form.user.country" id="exampleInputCountry" placeholder="Enter country">
             </fieldset>
-
+              
             <input type="button" ng-click="form.reset()" value="Reset" />
             <input type="submit" ng-click="form.update(form.user)" value="Save" />
           </form>
-          <!--Preview user and master object -->
+          <!--Preview user and master object 
           <pre>user = {{form.user | json}}</pre>
           <pre>master = {{form.master | json}}</pre>
+          -->
         </div>
       </div>
     </div>

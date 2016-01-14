@@ -1,8 +1,10 @@
 angular.module('app', ['ui.router'])
   .config(function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise('/home');
+
     $stateProvider
       .state('home', {
-        url:'/',
+        url:'/home',
         templateUrl: 'home/home.html'
       })
       .state('addressDetails', {
@@ -14,7 +16,7 @@ angular.module('app', ['ui.router'])
         url: '/getLocation',
         templateUrl: 'map/map.html'
       })
-    $urlRouterProvider.otherwise('/');
+    
   })
 
 
