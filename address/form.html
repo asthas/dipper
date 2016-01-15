@@ -10,7 +10,26 @@
             
             <div ng-repeat="n in form.range">
               
-              {{ n }}
+              <h3>Enter address #{{ n + 1 }}</h3>
+              <fieldset class="form-group">
+                <label for="exampleInputHouseNumber">House number</label>
+                <input type="text" class="form-control"  ng-model="form.addresses[n].house" id="exampleInputHouseNumber" placeholder="Enter House number">
+              </fieldset>
+
+              <fieldset class="form-group">
+                <label for="exampleInputStreet">Street</label>
+                <input type="text" class="form-control" ng-model="form.addresses[n].street" id="exampleInputStreet" placeholder="Enter name of the street">
+              </fieldset>
+
+              <fieldset class="form-group">
+                <label for="exampleInputCity">City</label>
+                <input type="text" class="form-control" ng-model="form.addresses[n].city" id="exampleInputCity" placeholder="Enter city">
+              </fieldset>
+
+              <fieldset class="form-group">
+                <label for="exampleInputCountry">Country</label>
+                <input type="text" class="form-control" ng-model="form.addresses[n].country" id="exampleInputCountry" placeholder="Enter country">
+              </fieldset>
 
             </div>
 
