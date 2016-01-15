@@ -4,15 +4,14 @@ angular.module('app')
       var vm = this;
 
       vm.add = function() {
-        vm.range.push(vm.range.length);
+        vm.addresses.push({});
       }
 
       vm.remove = function() {
-        if (vm.range.length == 1) {
-        } else {  
-          vm.range.pop();
+        if (vm.addresses.length == 1) {
+        } else {
           var removed = vm.addresses.pop();
-          console.log('Removed Address:');
+          console.log('Address removed:');
           console.group();
           console.log(removed);
           console.groupEnd();
@@ -31,8 +30,7 @@ angular.module('app')
       };
 
       vm.reset = function() {
-        vm.addresses = [];
-        vm.range = [0];     
+        vm.addresses = [{}];
       };
 
       vm.reset();

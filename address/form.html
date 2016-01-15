@@ -3,44 +3,44 @@
     <div class="row">
       <div class="col-lg-12">
         <h1>Add Address Details</h1>
- 
+
 
         <div ng-controller="formController as form">
           <form >
-            
-            <div ng-repeat="n in form.range">
-              
-              <h3>Enter address #{{ n + 1 }}</h3>
+
+            <div ng-repeat="address in form.addresses track by $index">
+
+              <h3>Enter address #{{ $index + 1 }}</h3>
               <fieldset class="form-group">
                 <label for="exampleInputHouseNumber">House number</label>
-                <input type="text" class="form-control"  ng-model="form.addresses[n].house" id="exampleInputHouseNumber" placeholder="Enter House number">
+                <input type="text" class="form-control"  ng-model="form.addresses[$index].house" id="exampleInputHouseNumber" placeholder="Enter House number">
               </fieldset>
 
               <fieldset class="form-group">
                 <label for="exampleInputStreet">Street</label>
-                <input type="text" class="form-control" ng-model="form.addresses[n].street" id="exampleInputStreet" placeholder="Enter name of the street">
+                <input type="text" class="form-control" ng-model="form.addresses[$index].street" id="exampleInputStreet" placeholder="Enter name of the street">
               </fieldset>
 
               <fieldset class="form-group">
                 <label for="exampleInputCity">City</label>
-                <input type="text" class="form-control" ng-model="form.addresses[n].city" id="exampleInputCity" placeholder="Enter city">
+                <input type="text" class="form-control" ng-model="form.addresses[$index].city" id="exampleInputCity" placeholder="Enter city">
               </fieldset>
 
               <fieldset class="form-group">
                 <label for="exampleInputCountry">Country</label>
-                <input type="text" class="form-control" ng-model="form.addresses[n].country" id="exampleInputCountry" placeholder="Enter country">
+                <input type="text" class="form-control" ng-model="form.addresses[$index].country" id="exampleInputCountry" placeholder="Enter country">
               </fieldset>
 
             </div>
 
             <input type="button" ng-click="form.remove()" value="-"/>
             <input type="button" ng-click="form.add()" value="+"/>
-            
+
             <input type="submit" ng-click="form.update()" value="Save" class="pull-right" />
             <input type="button" ng-click="form.reset()" value="Reset" class="pull-right"/>
 
           </form>
-          <!--Preview user and master object 
+          <!--Preview user and master object
           <pre>user = {{form.user | json}}</pre>
           <pre>master = {{form.master | json}}</pre>
           -->
