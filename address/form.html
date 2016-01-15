@@ -7,7 +7,7 @@
 
         <div ng-controller="formController as form">
           <form>
-          
+
             <fieldset class="form-group">
               <label for="exampleInputHouseNumber">House number</label>
               <input type="text" class="form-control"  ng-model="form.addresses[0].house" id="exampleInputHouseNumber" placeholder="Enter House number">
@@ -28,8 +28,12 @@
               <input type="text" class="form-control" ng-model="form.addresses[0].country" id="exampleInputCountry" placeholder="Enter country">
             </fieldset>
   
-            <input type="button" ng-click="form.reset()" value="Reset" />
-            <input type="submit" ng-click="form.update()" value="Save" />
+            <input type="button" value="-"/>
+            <input type="button" value="+"/>
+            
+            <input type="submit" ng-click="form.update()" value="Save" class="pull-right" />
+            <input type="button" ng-click="form.reset()" value="Reset" class="pull-right"/>
+
           </form>
           <!--Preview user and master object 
           <pre>user = {{form.user | json}}</pre>
