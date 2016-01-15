@@ -2,8 +2,6 @@ angular.module('app')
     .controller('formController',function($state) {
 
       var vm = this;
-      vm.count = 1;
-      vm.addresses = [];
 
       vm.add = function() {
         vm.count += 1;
@@ -18,7 +16,8 @@ angular.module('app')
       };
 
       vm.reset = function() {
-        vm.addresses = []     
+        vm.addresses = [];
+        vm.count = 1;     
       };
 
       vm.reset();
