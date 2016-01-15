@@ -33,11 +33,19 @@
 
             </div>
 
-            <input type="button" ng-click="form.remove()" value="-"/>
-            <input type="button" ng-click="form.add()" value="+"/>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default" ng-click="form.remove()">
+                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-default" ng-click="form.add()">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              </button>
+            </div>
 
-            <input type="submit" ng-click="form.update()" value="Save" class="pull-right" />
-            <input type="button" ng-click="form.reset()" value="Reset" class="pull-right"/>
+            <div class="pull-right">
+              <button type="button" ng-click="form.reset()" class="btn btn-danger">Reset</button>
+              <button type="button" ng-click="form.update()" class="btn btn-primary">Save</button>
+            </div>
 
           </form>
         </div>
