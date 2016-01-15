@@ -20,12 +20,12 @@ angular.module('app')
 
       vm.update = function() {
         console.log('Addresses entered:');
+        console.group();
         vm.addresses.forEach(function(address, i) {
-          console.group();
           console.log('Address #', i + 1);
           console.log(address);
-          console.groupEnd();
         })
+        console.groupEnd();
         console.log();
       };
 
