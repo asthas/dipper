@@ -2,10 +2,9 @@ angular.module('app')
     .controller('formController',function($state) {
 
       var vm = this;
-      vm.users = [];
+      vm.addresses = [];
 
-      vm.update = function(user) {
-        vm.users.push(user); 
+      vm.update = function() { 
         console.log(vm);
       };
 
