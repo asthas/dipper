@@ -8,27 +8,27 @@
         <div ng-controller="formController as form">
           <form >
 
-            <div ng-repeat="address in form.addresses track by $index">
+            <div ng-repeat="address in form.addresses">
 
               <h3>Enter address #{{ $index + 1 }}</h3>
               <fieldset class="form-group">
                 <label for="exampleInputHouseNumber">House number</label>
-                <input type="text" class="form-control"  ng-model="form.addresses[$index].house" id="exampleInputHouseNumber" placeholder="Enter House number">
+                <input type="text" class="form-control"  ng-model="address.house" id="exampleInputHouseNumber" placeholder="Enter House number">
               </fieldset>
 
               <fieldset class="form-group">
                 <label for="exampleInputStreet">Street</label>
-                <input type="text" class="form-control" ng-model="form.addresses[$index].street" id="exampleInputStreet" placeholder="Enter name of the street">
+                <input type="text" class="form-control" ng-model="address.street" id="exampleInputStreet" placeholder="Enter name of the street">
               </fieldset>
 
               <fieldset class="form-group">
                 <label for="exampleInputCity">City</label>
-                <input type="text" class="form-control" ng-model="form.addresses[$index].city" id="exampleInputCity" placeholder="Enter city">
+                <input type="text" class="form-control" ng-model="address.city" id="exampleInputCity" placeholder="Enter city">
               </fieldset>
 
               <fieldset class="form-group">
                 <label for="exampleInputCountry">Country</label>
-                <input type="text" class="form-control" ng-model="form.addresses[$index].country" id="exampleInputCountry" placeholder="Enter country">
+                <input type="text" class="form-control" ng-model="address.country" id="exampleInputCountry" placeholder="Enter country">
               </fieldset>
 
             </div>
