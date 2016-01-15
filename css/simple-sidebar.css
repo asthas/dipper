@@ -6,25 +6,6 @@
 
 /* Toggle Styles */
 
-#wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-.active{
-            background-color: #E0F7FA;
-            height: 40px;
-            width: 250px;
-        }
-#map {
-    width: 400px;
-    
-    height: 400px;
-}
-
 #wrapper.toggled {
     padding-left: 250px;
 }

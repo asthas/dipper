@@ -1143,6 +1143,7 @@ img {
 }
 .img-circle {
   border-radius: 50%;
+  border-color: #34B67A;
 }
 hr {
   margin-top: 20px;

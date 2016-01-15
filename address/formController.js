@@ -1,14 +1,12 @@
-/*Controller for single adress field
 angular.module('app')
     .controller('formController',function($state) {
 
       var vm = this;
-      vm.master = {};
+      vm.users = [];
 
       vm.update = function(user) {
-
-        vm.master = angular.copy(user); 
-        console.log(vm, user);
+        vm.users.push(user); 
+        console.log(vm);
       };
 
       vm.reset = function() {
@@ -17,22 +15,4 @@ angular.module('app')
 
       vm.reset();
     });
-  */
 
-  angular.module('app')
-    .controller('formController', function() {
-      var vm = this;
-
-      vm.choices = [{id: 'choice1'}, {id: 'choice2'}];
-
-      vm.addNewChoice = function() {
-        var newItemNo = vm.choices.length + 1;
-        vm.choices.push({'id': 'choice' + newItemNo});
-
-      }
-
-      vm.removeChoice = function() {
-        var lastItem = vm.choices.length - 1;
-        vm.choices.splice(lastItem);
-      }
-    })
