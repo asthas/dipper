@@ -1,8 +1,18 @@
 <div id="page-content-wrapper">
   <div class="container-fluid">
-  	<h1>Got Location</h1>
-      
-      <div ng-include="'map/original.html'"> 
-      </div>
+
+        <div style="width: 100%; float:left; height: 100%">
+
+          <ng-map zoom="14" center="current-position" >
+            <directions
+              draggable="true"
+              travel-mode="DRIVING"
+              origin="current-location"
+              destination="New Delhi, India">
+            </directions>
+          </ng-map>
+
+        </div>
+
   </div>
 </div>

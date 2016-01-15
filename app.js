@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router'])
+angular.module('app', ['ngMap', 'ui.router'])
   .config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/home');
 
@@ -16,7 +16,5 @@ angular.module('app', ['ui.router'])
         url: '/getLocation',
         templateUrl: 'map/map.html'
       })
-    
-  })
 
-
+  });
