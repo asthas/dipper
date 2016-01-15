@@ -5,15 +5,19 @@ html{
 body{
     height: 100%;
 }
+
 #ui-view.ng-scope: {
     min-height: 100%;
 }
+
 #page-content-wrapper.ng-scope: {
     height: 100%;
 }
+
 .container-fluid{
     height: 100%;
 }
+
 img {
     height: 250px;
     width: 250px;
@@ -25,13 +29,8 @@ img {
     border-color: #34B67A;
 }
 
-.active{
-            background-color: #E0F7FA;
-            height: 40px;
-            width: 250px;
-        }
-#map {
-    width: 400px;
-    
-    height: 400px;
+.active {
+    background-color: #E0F7FA;
+    height: 40px;
+    width: 250px;
 }
