@@ -3,6 +3,15 @@ angular.module('app')
 
       var vm = this;
 
+      vm.range = function() {
+        var arr = [];
+        for (i = 0; i < vm.count; ++i) {
+          arr.push(i);
+        }
+        console.log(arr);
+        return arr;
+      }
+
       vm.add = function() {
         vm.count += 1;
       }
