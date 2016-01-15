@@ -10,12 +10,24 @@ angular.module('app')
       vm.remove = function() {
         if (vm.range.length == 1) {
         } else {  
-          vm.range.splice(-1, 1);
+          vm.range.pop();
+          var removed = vm.addresses.pop();
+          console.log('Removed Address:');
+          console.group();
+          console.log(removed);
+          console.groupEnd();
         }
       }
 
-      vm.update = function() { 
-        console.log(vm);
+      vm.update = function() {
+        console.log('Addresses entered:');
+        vm.addresses.forEach(function(address, i) {
+          console.group();
+          console.log('Address #', i + 1);
+          console.log(address);
+          console.groupEnd();
+        })
+        console.log();
       };
 
       vm.reset = function() {
