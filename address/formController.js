@@ -3,21 +3,20 @@ angular.module('app')
 
       var vm = this;
 
-      vm.range = function() {
-        var arr = [];
-        for (i = 0; i < vm.count; ++i) {
-          arr.push(i);
-        }
-        console.log(arr);
-        return arr;
-      }
-
       vm.add = function() {
-        vm.count += 1;
+        console.log('before add', vm.range);
+        vm.range.push(vm.range.length);
+        console.log('after add', vm.range);
       }
 
       vm.remove = function() {
-        vm.count -= 1;
+        if (vm.range.length == 1) {
+          console.log('not doing anything', vm.range);
+        } else {  
+          console.log('before remove', vm.range);
+          vm.range.splice(-1, 1);
+          console.log('after remove', vm.range);
+        }
       }
 
       vm.update = function() { 
@@ -26,7 +25,7 @@ angular.module('app')
 
       vm.reset = function() {
         vm.addresses = [];
-        vm.count = 1;     
+        vm.range = [0];     
       };
 
       vm.reset();
