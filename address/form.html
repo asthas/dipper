@@ -7,6 +7,7 @@
 
         <div ng-controller="formController as form">
           <form>
+          
             <fieldset class="form-group">
               <label for="exampleInputHouseNumber">House number</label>
               <input type="text" class="form-control"  ng-model="form.addresses[0].house" id="exampleInputHouseNumber" placeholder="Enter House number">
@@ -26,27 +27,7 @@
               <label for="exampleInputCountry">Country</label>
               <input type="text" class="form-control" ng-model="form.addresses[0].country" id="exampleInputCountry" placeholder="Enter country">
             </fieldset>
-
-            <fieldset class="form-group">
-              <label for="exampleInputHouseNumber">House number</label>
-              <input type="text" class="form-control"  ng-model="form.addresses[1].house" id="exampleInputHouseNumber" placeholder="Enter House number">
-            </fieldset>
-
-            <fieldset class="form-group">
-              <label for="exampleInputStreet">Street</label>
-              <input type="text" class="form-control" ng-model="form.addresses[1].street" id="exampleInputStreet" placeholder="Enter name of the street">
-            </fieldset>
-
-            <fieldset class="form-group">
-              <label for="exampleInputCity">City</label>
-              <input type="text" class="form-control" ng-model="form.addresses[1].city" id="exampleInputCity" placeholder="Enter city">
-            </fieldset>
-
-            <fieldset class="form-group">
-              <label for="exampleInputCountry">Country</label>
-              <input type="text" class="form-control" ng-model="form.addresses[1].country" id="exampleInputCountry" placeholder="Enter country">
-            </fieldset>
-              
+  
             <input type="button" ng-click="form.reset()" value="Reset" />
             <input type="submit" ng-click="form.update()" value="Save" />
           </form>

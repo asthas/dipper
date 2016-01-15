@@ -9,7 +9,7 @@ angular.module('app')
       };
 
       vm.reset = function() {
-        vm.user = angular.copy(vm.master);
+        vm.addresses = []     
       };
 
       vm.reset();
