@@ -44,20 +44,30 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav" >
-                <li >
-                    <a ui-sref="home" ui-sref-active="active">Profile</a>
-                </li>
-                <li >
-                    <a ui-sref="addressDetails" ui-sref-active="active">Add address details</a>
-                </li>
-                <li>
-                    <a ui-sref="getLocation" ui-sref-active="active">Locate office</a>
-                </li>
-            </ul>
+        <div ng-controller="ButtonCtrl">
+            <span ng-hide="menu">
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav" >
+                        <li >
+                            <a ui-sref="home" ui-sref-active="active">Profile</a>
+                        </li>
+                        <li >
+                            <a ui-sref="addressDetails" ui-sref-active="active">Add address details</a>
+                        </li>
+                        <li>
+                            <a ui-sref="getLocation" ui-sref-active="active">Locate office</a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+        <span ng-show="menu"></span>
         </div>
         <!-- /#sidebar-wrapper -->
+        
+            <button type="button" ng-click="toggleMenu()" class="btn btn-default btn-lg" ng-click="toggleMenu()">
+              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            </button>
+            
         <div ui-view>
         </div>
 
@@ -93,6 +103,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="app.js"></script>
+    <script src="toggle.controller.js"></script>
     <script src="address/formController.js"></script>
 </body>
 

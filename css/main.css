@@ -51,3 +51,7 @@ footer {
   width: 100%;
   text-align: center;
 }
+
+.btn-lg {
+    margin: 10px;
+}
