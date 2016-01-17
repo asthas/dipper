@@ -41,10 +41,10 @@
 
 <body ng-app="app">
 
-    <div id="wrapper">
+    <div id="wrapper" ng-controller="ButtonCtrl">
 
         <!-- Sidebar -->
-        
+            <span ng-hide="Toggle">
                 <div id="sidebar-wrapper">
                     <ul class="sidebar-nav" >
                         <li >
@@ -58,13 +58,15 @@
                         </li>
                     </ul>
                 </div>
+            </span>
+            <span ng-show="Toggle"></span>   
         <!-- /#sidebar-wrapper -->
         
-            <a href="#menu-toggle" id="menu-toggle">
-                <button type="button" class="btn btn-default btn-lg">
-                  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            
+                <button type="button" ng-click ="toggleMenu()" class="btn btn-default btn-lg">
+                  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true">Toggle</span>
                 </button>
-            </a>
+           
 
         <div ui-view>
         </div>
@@ -101,15 +103,16 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- toggle menu -->
+    <!-- toggle menu 
     <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
     </script>
-
+    -->
     <script src="app.js"></script>
+    <script src="toggle.controller.js"></script>
     <script src="address/formController.js"></script>
 </body>
 
